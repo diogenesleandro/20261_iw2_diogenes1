@@ -29,6 +29,24 @@ $(document).ready(function(){
     console.log("completou");
 });
   });
+  $('.excluir').click(function(){
+    var id =$(this).attr("id");
+     $.ajax({
+    url: "apaga.php",
+    type: "POST",
+    data: "id="+id,
+    dataType: "html"
+
+    }).done(function(resposta) {
+        $("div").html(resposta);
+
+    }).fail(function(jqXHR, textStatus ) {
+        $("div").html("Request failed: " + textStatus);
+
+    }).always(function() {
+        console.log("completou");
+    });
+  });
 });
 </script>
     <title>Document</title>

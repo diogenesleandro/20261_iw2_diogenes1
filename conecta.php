@@ -6,7 +6,7 @@ $db   = 'world';
 $user = 'root';
 $pass = 'usbw';
 $charset = 'utf8mb4';
-$port = '3308';
+$port = '3307';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port";
 
